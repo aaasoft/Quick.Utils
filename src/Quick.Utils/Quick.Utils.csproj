@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net6.0;net8.0</TargetFrameworks>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Version>2026.1.226</Version>
+		<Authors>scbeta</Authors>
+		<RepositoryUrl>https://cnb.cool/scbeta/Quick.Utils</RepositoryUrl>
+		<Description>Some utils.</Description>
+		<PackageProjectUrl>https://cnb.cool/scbeta/Quick.Utils</PackageProjectUrl>
+		<IsAotCompatible>true</IsAotCompatible>
+  </PropertyGroup>
+</Project>
