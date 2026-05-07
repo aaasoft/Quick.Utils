@@ -1,15 +1,10 @@
-﻿using System.Text;
+﻿using System.Reflection;
+using System.Text;
 
 namespace Quick.Utils
 {
     public class ExceptionUtils
     {
-        //忽略的属性名称数组
-        private static String[] ignorePropertiyNames = new String[]
-        {
-            "Message","InnerException","StackTrace","Data"
-        };
-
         public static String GetExceptionString(Exception ex)
         {
             StringBuilder sb = new StringBuilder();
@@ -17,7 +12,7 @@ namespace Quick.Utils
             while (tmpEx != null)
             {
                 sb.AppendLine("------------------------------------------------------");
-                _GetExceptionString(tmpEx, sb, String.Empty);
+                _GetExceptionString(tmpEx, sb, string.Empty);
                 tmpEx = tmpEx.InnerException;
             }
             return sb.ToString();
@@ -35,10 +30,17 @@ namespace Quick.Utils
         {
             StringBuilder sb = new StringBuilder();
             Exception tmpEx = ex;
+            var isFirst = true;
             while (tmpEx != null)
             {
-                sb.Append(">");
-                sb.AppendLine(tmpEx.Message);
+                if (tmpEx is not TargetInvocationException)
+                {
+                    if (isFirst)
+                        isFirst = false;
+                    else
+                        sb.Append(">");
+                    sb.AppendLine(tmpEx.Message);
+                }
                 tmpEx = tmpEx.InnerException;
             }
             return sb.ToString();
