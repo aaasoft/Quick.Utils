@@ -5,9 +5,9 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Version>2026.2.507</Version>
 		<Authors>scbeta</Authors>
-		<RepositoryUrl>https://cnb.cool/scbeta/Quick.Utils</RepositoryUrl>
+		<RepositoryUrl>https://github.com/aaasoft/Quick.Utils</RepositoryUrl>
 		<Description>Some utils.</Description>
-		<PackageProjectUrl>https://cnb.cool/scbeta/Quick.Utils</PackageProjectUrl>
+		<PackageProjectUrl>https://github.com/aaasoft/Quick.Utils</PackageProjectUrl>
 		<IsAotCompatible>true</IsAotCompatible>
   </PropertyGroup>
 </Project>
