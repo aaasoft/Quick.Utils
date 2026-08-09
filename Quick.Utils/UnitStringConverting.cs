@@ -248,6 +248,11 @@ namespace Quick.Utils
             if (UnitIndex > 0)
                 numberOfDecimalPlaces = NumberOfDecimalPlaces;
             var unitUnitsString = unitUnits.ToString("F" + numberOfDecimalPlaces);
+            if (numberOfDecimalPlaces > 0)
+            {
+                unitUnitsString = unitUnitsString.TrimEnd('0');
+                unitUnitsString = unitUnitsString.TrimEnd('.');
+            }
             var UnitString = UnitList[UnitIndex];
 
             sb.Append(unitUnitsString);
